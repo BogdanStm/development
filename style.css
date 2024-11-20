@@ -1,0 +1,147 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.second_navbar {
+  width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.second_navbar-phone {
+  color: #808080;
+  border-right: 2px solid #808080;
+  padding-right: 20px;
+}
+.second_navbar-phone a {
+  padding-left: 10px;
+  color: #808080;
+}
+.second_navbar-mail {
+  color: #808080;
+  padding-left: 20px;
+}
+
+.second_navbar-mail a {
+  color: #808080;
+  padding-left: 10px;
+}
+
+li {
+  list-style: none;
+}
+li a {
+  color: #808080;
+  text-decoration: none;
+}
+
+.navbar {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.nav-menu {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+  font-weight: 600;
+}
+.nav-link:hover {
+  color: #000;
+  border-top: 1px solid #000;
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .second_navbar {
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+  .navbar {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .second_navbar {
+    width: 100%;
+  }
+  .nav-menu {
+    position: fixed;
+    top: 130px;
+    left: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: #808080;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+  .nav-item {
+    width: 100%;
+    margin: 8px 0;
+
+  }
+  .nav-link:hover {
+    color: #ffffff;
+    border-top: none;
+  }
+  .nav-item:hover {
+    color: #ffffff;
+    background-color: #FFA300;
+  }
+  .nav-item a {
+    color: #ffffff;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+}
+
+@media (max-width: 1300px) {
+  .second_navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+}
